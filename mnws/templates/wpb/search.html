@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "wpb/base.html" %}
+{% block body_block%}
+
+<h1>Результаты поиска</h1>
+
+<ul>
+  {% for entry in object_list %}
+    <li>
+      <a href="{{ entry.link }}">{{ entry.title }}</a>
+
+    </li>
+  {% empty %}
+      <h4>Ничего не найдено.</h4>
+  {% endfor %}
+</ul>
+{% endblock %}
